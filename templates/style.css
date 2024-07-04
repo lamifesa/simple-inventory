@@ -1,0 +1,19 @@
+.post {
+        padding: 10px;
+        margin: 5px;
+        background-color: #f3f3f3
+}
+
+nav a {
+        font-size: 3em;
+        margin-left: 50px;
+        text-decoration: none;
+}
+
+label {
+
+}
+
+table {
+    border-color: black;
+}

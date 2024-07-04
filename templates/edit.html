@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <form method="post">
+        <label for="fname">First Name: <input type="text" name="fname" value="{{ employ['fname'] }}"></label>
+        <label for="lname">Last Name<input type="text" name="lname" value="{{ employ['lname'] }}"></label>
+        <label for="sex">Sex<input type="text" name="sex" value="{{ employ['sex'] }}"></label>
+        <label for="job">Role<input type="text" name="job" value="{{ employ['job'] }}"></label><br>
+        <!-- <label for=""><input type="text" name="" id=""></label> -->
+        <input type="button" value="Submit">
+    </form>
+
+    <hr>
+    <form action="{{ url_for('delete', id=employ['id']) }}" method="POST">
+        <input type="button" value="Delete Employee"
+                onclick="return confirm('Are you sure you want to delete this post?')">
+    </form>
+{% endblock %}

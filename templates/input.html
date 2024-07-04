@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<body>
+    <form action="" method="POST">
+        <label for="fname">First Name: <input type="text" name="fname" value="{{ request.form['fname'] }}"></label>
+        <label for="lname">Last Name<input type="text" name="lname" value="{{ request.form['lname'] }}"></label>
+        <label for="sex">Sex<input type="text" name="sex" value="{{ request.form['sex'] }}"></label>
+        <label for="job">Role<input type="text" name="job" value="{{ request.form['job'] }}"></label><br>
+        <input type="button" value="Submit">
+    </form>
+</body>
+</html>
+{% endblock %}

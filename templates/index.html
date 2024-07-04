@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <a href="input.html"><input type="button" value="+ Add"></a><br>
+    <table>
+        <thead>
+            <th>id</th>
+            <th>date</th>
+            <th>first-name</th>
+            <th>last-name</th>
+            <th>sex</th>
+            <th>role</th> 
+            <th>action</th>          
+        </thead>
+        {% for i in data %}
+        <tr>
+            <td>{{ i['id'] }}</td>
+            <td>{{ i['created'] }}</td>
+            <td>{{ i['fname'] }}</td>
+            <td>{{ i['lname'] }}</td>
+            <td>{{ i['sex'] }}</td>
+            <td>{{ i['job'] }}</td>
+            <td><a href="/{{ i['id'] }}/edit.html">Edit</a><br>
+        </tr>
+        {%endfor%}
+    </table>
+{% endblock %}
